@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.birol.jgtdsl.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_toHome"
+            app:destination="@id/FirstFragment" />
+
+        <action
+            android:id="@+id/action_homeToCinfo"
+            app:destination="@id/fragment_cinfo" />
+
+        <action
+            android:id="@+id/action_homeToPayment"
+            app:destination="@id/fragment_payment" />
+
+        <action
+            android:id="@+id/action_homeToDownloads"
+            app:destination="@id/fragment_downloads" />
+
+        <action
+            android:id="@+id/action_homeToNotifications"
+            app:destination="@id/fragment_notification" />
+
+        <action
+            android:id="@+id/action_homeToBillHistory"
+            app:destination="@id/fragment_bill_history" />
+
+    </fragment>
+
+
+
+
+
+    <fragment
+        android:id="@+id/fragment_cinfo"
+        android:name="com.birol.jgtdsl.CustomerInfoFragment"
+        android:label="Customer Info"
+        tools:layout="@layout/fragment_customer_info">
+
+        <action
+            android:id="@+id/action_toHome"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_payment"
+        android:name="com.birol.jgtdsl.paymentListDialogFragment"
+        android:label="Outstanding bills"
+        tools:layout="@layout/fragment_payment_list_dialog_list_dialog">
+
+        <action
+            android:id="@+id/action_toHome"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_downloads"
+        android:name="com.birol.jgtdsl.DownloadsFragment"
+        android:label="Downloads"
+        tools:layout="@layout/fragment_downloads">
+
+        <action
+            android:id="@+id/action_toHome"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_notification"
+        android:name="com.birol.jgtdsl.NotificationFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification">
+
+        <action
+            android:id="@+id/action_toHome"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_bill_history"
+        android:name="com.birol.jgtdsl.BillHistoryFragment"
+        android:label="Payment History"
+        tools:layout="@layout/fragment_bill_history">
+
+        <action
+            android:id="@+id/action_toHome"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+
+
+
+
+
+</navigation>

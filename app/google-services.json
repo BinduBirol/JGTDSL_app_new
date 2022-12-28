@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "147984433382",
+    "project_id": "jgtdsl-new",
+    "storage_bucket": "jgtdsl-new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147984433382:android:960a82d238f19d4a3d3b27",
+        "android_client_info": {
+          "package_name": "com.birol.jgtdsl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147984433382-l0jhl5bculd3b1126edjr9540ree6jub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9IdVjfg-GzWb3tijw8DQX9e2d7sunuqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147984433382-l0jhl5bculd3b1126edjr9540ree6jub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
