@@ -1,64 +1,143 @@
 package com.birol.jgtdsl;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link BillHistoryFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.birol.jgtdsl.databinding.FragmentBillHistoryBinding;
+
+
 public class BillHistoryFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private FragmentBillHistoryBinding binding;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
-    public BillHistoryFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment BillHistoryFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static BillHistoryFragment newInstance(String param1, String param2) {
-        BillHistoryFragment fragment = new BillHistoryFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bill_history, container, false);
+        View view = inflater.inflate(R.layout.fragment_bill_history, container, false);
+        mainTable(view);
+        return view;
+
+    }
+
+    public void mainTable(View view) {
+        TableLayout stk = (TableLayout) view.findViewById(R.id.table_main);
+        TableRow tbrow0 = new TableRow(getActivity());
+
+        TextView tv0 = new TextView(getActivity());
+        tv0.setText("Bill month");
+        tv0.setBackgroundResource(R.drawable.table_cell);
+        tv0.setPadding(20,20,20,20);
+        tv0.setTextSize(20);
+        tv0.setTypeface(null, Typeface.BOLD);
+        tbrow0.addView(tv0);
+
+        TextView tv1 = new TextView(getActivity());
+        tv1.setText("Payment date");
+        tv1.setBackgroundResource(R.drawable.table_cell);
+        tv1.setPadding(20,20,20,20);
+        tv1.setTextSize(20);
+        tv1.setTypeface(null, Typeface.BOLD);
+        tbrow0.addView(tv1);
+
+        TextView tv2 = new TextView(getActivity());
+        tv2.setText("Payment method");
+        tv2.setBackgroundResource(R.drawable.table_cell);
+        tv2.setPadding(20,20,20,20);
+        tv2.setTextSize(20);
+        tv2.setTypeface(null, Typeface.BOLD);
+        tbrow0.addView(tv2);
+
+        TextView tv3 = new TextView(getActivity());
+        tv3.setText("Billed amount");
+        tv3.setBackgroundResource(R.drawable.table_cell);
+        tv3.setPadding(20,20,20,20);
+        tv3.setTextSize(20);
+        tv3.setTypeface(null, Typeface.BOLD);
+        tbrow0.addView(tv3);
+
+        TextView tv4 = new TextView(getActivity());
+        tv4.setText("Surcharge");
+        tv4.setBackgroundResource(R.drawable.table_cell);
+        tv4.setPadding(20,20,20,20);
+        tv4.setTextSize(20);
+        tv4.setTypeface(null, Typeface.BOLD);
+        tbrow0.addView(tv4);
+
+        TextView tv5 = new TextView(getActivity());
+        tv5.setText("Status");
+        tv5.setBackgroundResource(R.drawable.table_cell);
+        tv5.setPadding(20,20,20,20);
+        tv5.setTextSize(20);
+        tv5.setTypeface(null, Typeface.BOLD);
+        tbrow0.addView(tv5);
+
+
+        stk.addView(tbrow0);
+
+        for (int i = 0; i < 12; i++) {
+            TableRow tbrow = new TableRow(getActivity());
+            TextView t1v = new TextView(getActivity());
+            t1v.setText("Dec 2022");
+            t1v.setBackgroundResource(R.drawable.table_cell);
+            t1v.setPadding(20,20,20,20);
+            t1v.setTextSize(20);
+            t1v.setGravity(Gravity.CENTER);
+            tbrow.addView(t1v);
+
+            TextView t2v = new TextView(getActivity());
+            t2v.setText("20 jun 2022");
+            t2v.setBackgroundResource(R.drawable.table_cell);
+            t2v.setPadding(20,20,20,20);
+            t2v.setTextSize(20);
+            t2v.setGravity(Gravity.CENTER);
+            tbrow.addView(t2v);
+
+            TextView t3v = new TextView(getActivity());
+            t3v.setText("DBBL, Nexus pay");
+            t3v.setBackgroundResource(R.drawable.table_cell);
+            t3v.setPadding(20,20,20,20);
+            t3v.setTextSize(20);
+            t3v.setGravity(Gravity.CENTER);
+            tbrow.addView(t3v);
+
+            TextView t4v = new TextView(getActivity());
+            t4v.setText("12000");
+            t4v.setBackgroundResource(R.drawable.table_cell);
+            t4v.setPadding(20,20,20,20);
+            t4v.setTextSize(20);
+            t4v.setGravity(Gravity.CENTER);
+            tbrow.addView(t4v);
+
+            TextView t5v = new TextView(getActivity());
+            t5v.setText("12000");
+            t5v.setBackgroundResource(R.drawable.table_cell);
+            t5v.setPadding(20,20,20,20);
+            t5v.setTextSize(20);
+            t5v.setGravity(Gravity.CENTER);
+            tbrow.addView(t5v);
+
+            TextView t6v = new TextView(getActivity());
+            t6v.setText("Paid");
+            t6v.setBackgroundResource(R.drawable.table_cell);
+            t6v.setPadding(20,20,20,20);
+            t6v.setTextSize(20);
+            t6v.setGravity(Gravity.CENTER);
+            tbrow.addView(t6v);
+
+            stk.addView(tbrow);
+        }
+
     }
 }
